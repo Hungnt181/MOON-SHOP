@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../giaodien"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "giaodien"
+	}
+}

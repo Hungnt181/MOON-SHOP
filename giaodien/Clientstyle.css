@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(font/static/Quicksand-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: quicksand1;
+    src: url(font/static/Quicksand-Light.ttf);
+}
+
+@font-face {
+    font-family: icel_koni;
+    src: url(font/iCiel\ Koni\ Black.otf);
+}
+
+.container{
+    width: 100%;
+    font-family: quicksand;
+}
+
+header{
+    height: 600px;
+    background-image: url(img/banner1.jpg);
+    /* background-image: url(img/banner2.webp); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top_header{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.top_header ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+}
+
+.top_header ul li{
+    position: relative;
+}
+
+.sub_user{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* z-index: 1; */
+    display: none !important;
+}
+
+.sub_user li{
+    width: 120px;
+    background: #000;
+    padding: 10px;
+    top: -15px;
+    border-bottom: 1px solid gray;
+}
+
+.sub_user li:hover{
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.sub_user li:last-child{
+    border: none;
+}
+
+.top_header ul li:hover .sub_user{
+    z-index: 1;
+    display: flex !important;
+}
+
+.sub_user li a{
+    text-decoration: none;
+    color: white;
+}
+
+.top_header ul li i {
+    font-size: 30px;
+    padding: 25px 20px;
+    cursor: pointer;
+}
+
+.top_header button{
+    width: 25px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-family: quicksand;
+}
+
+.menu{
+    width: 95%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #aea7a1e9;
+    border-radius: 50px;
+}
+
+.menu .logo_header{
+    width: 20%;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.menu .logo_header img{
+    width: 170px;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: -80px;
+}
+
+.list_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px;
+
+}
+
+.list_menu .list_menu_left ul,
+.list_menu .list_menu_right ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.list_menu .list_menu_left ul>li,
+.list_menu .list_menu_right ul>li{
+    padding: 10px 10px;
+    position: relative;
+}
+
+.list_menu .list_menu_left ul li a,
+.list_menu .list_menu_right ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: quicksand;
+    font-weight: 500;
+    color: #000;
+    /* position: relative; */
+}
+
+/* .list_menu .list_menu_left ul li a:hover,
+.list_menu .list_menu_right ul li a:hover{
+    color: #f8ce00; 
+} */
+
+.list_menu .list_menu_left>ul>li>a::before,
+.list_menu .list_menu_right>ul>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0;
+    background: #f8ce00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.list_menu .list_menu_left ul li:hover a::before,
+.list_menu .list_menu_right ul li:hover a::before{
+    width: 100%;
+}
+
+.sub_menu{
+    /* display: flex; */
+    position: absolute;
+    margin-top: 10px;
+    width: 230px;
+    flex-direction: column;
+    background-color: #aea7a1e9;
+    display: none !important;
+    left: 0;
+}
+
+.sub_menu li{
+    padding: 10px 5px !important;
+    border-bottom: 1px solid gray;
+}
+
+.sub_menu li:hover{
+    border-bottom: 1px solid rgb(203, 203, 203);
+}
+
+.sub_menu a:hover{
+    color: #f8ce00 !important;
+}
+
+.sub_menu li:last-child{
+    border: none;
+}
+
+.list_menu .list_menu_left ul li:hover .sub_menu{
+    display: flex !important;
+}
+
+.list_menu .list_menu_left>ul>li.has_child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f107";
+    position: absolute;
+    top: 0;
+    padding: 15px 0px 15px 5px;
+}
+
+.top_header>ul>li.has_child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f107";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px 0;
+}
+
+ul li img {
+    width: 20px;
+}
+
+main{
+    width: 70%;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.intro{
+    padding-bottom: 100px;
+}
+
+.intro h1{
+    text-align: center;
+    padding-bottom: 50px;
+    font-family: icel_koni;
+    color: #FFA62F;
+    font-size: 48px;
+}
+
+.main_intro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_intro_item{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.img_item{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img_item img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 4px 4px 25px #6F4E37;
+}
+
+.content_item{
+    text-align: center;
+}
+
+.content_item h2:hover{
+    text-shadow: 2px 2px 30px #f8ce00;
+    transition: 0.3s ease;
+}
+
+.content_item a  {
+    text-decoration: none;
+    color: #FFA62F;
+    padding: 30px;
+    text-transform: capitalize;
+}
+
+footer{
+    background-image: url(img/bg-footer.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_footer{
+    padding: 100px 0 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top_footer .logo_footer{
+    padding-right: 100px ;
+}
+
+.top_footer .logo_footer img{
+    width: 300px;
+}
+
+.content_footer h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-right: 20px;
+}
+
+.content_footer .hotline{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.content_footer .hotline button{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    line-height: 5px;
+    font-family: quicksand;
+    cursor: pointer;
+    background: linear-gradient(to left top, #D82083 30%, white);
+}
+
+.content_footer .hotline button:hover{
+    background: #D82083;
+    color: white;
+}
+
+.address_store h3{
+    padding: 10px 70px;
+}
+
+.bottom_footer{
+    text-align: center;
+}
+
+.new_product,
+.hot_product{
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.bg_title{
+    position: absolute;
+    top: 0;
+    left: 150px;
+}
+
+.new_product>h2,
+.hot_product>h2 {
+    padding: 40px 0 30px 0;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #FFA62F;
+    font-family: icel_koni;
+    font-size: 42px;
+    color: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-transform: uppercase;
+}
+
+.box_product{
+    border: 3px solid #FFA62F;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px;
+    flex-wrap: wrap;
+}
+
+.product_item{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    position: relative;
+    padding: 10px 0;
+    height: 400px;
+}
+
+.product_item .detail_product{
+    text-align: center;
+
+}
+
+.product_item .detail_product a{
+    text-decoration: none;
+}
+
+.product_item .detail_product a h3{
+    padding: 10px 0;
+    color: black;
+    font-family: quicksand1;
+    transition: 0.25s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product_item .detail_product a h3:hover{
+    color: #FFA62F;
+    font-family: quicksand;
+}
+
+.product_item .detail_product span{
+    color: red;
+}
+
+.product_item .img_product {
+    width: 100%;
+    position: relative;   
+    overflow: hidden;
+    height: 80%;
+}
+
+.product_item .img_product img{
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.hover_product{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.hover_product button{
+    background: #FFA62F;
+    color: white;
+    font-family: quicksand;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.hover_product button:hover{
+    background: #f8ce00;
+}
+
+.img_product:hover .hover_product{
+    opacity: 1;
+}
+
+.product_item:hover{
+    box-shadow: 0px 0px 15px #f895005f;
+}
+
+.product_item:hover .img_product img{
+    transform: scale(1.2);
+}
+
+
+/**/
+
+#xinchao {
+    margin-top: 20px;
+    font-size: 20px;
+}
